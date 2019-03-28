@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12">
+          <ul class="nav nav-tabs justify-content-center">
+          <li class="nav-item">
+              <a class="nav-link" href="/profile/<?= $identity['name'] ?>">Ver meu perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Listas enviadas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/profile/<?= $identity['name'] ?>/edit">Editar perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Listas favoritas</a>
+            </li>
+          </ul>
+      </div>
+      <div class="justify-content-center col-sm-3 ">
+          <img class="d-block mx-auto" src="/uploads/profile/user.svg" width="160" height="160">
+      </div>
+<?php if (($params === 'edit')) { ?>
+
+    <div class="col-sm-9">
+        <h2> <?= $identity['name'] ?></h2>
+        <form>
+        <div class="form-group">
+        <label for="about">Nome</label>
+        <input name="surname" class="form-control" id="surname" type="text" />
+        </div>
+        <div class="form-group">
+        <label for="surname">Sobrenome</label>
+        <input name="surname" class="form-control" id="surname" type="text" />
+        </div>
+        <div class="form-group">
+        <label for="about">Sobre</label>
+        <textarea style="width: 100%"></textarea>
+        </div>
+        </form>
+    </div>
+    <div class="col-sm-12">
+    <form class="mx-auto" style="width:50%;">
+    <div class="form-group" >
+        
+    </div>
+    </div>
+<?php } else { ?>
+   
+    <div class="col-sm-5">
+        <h2> <?= $identity['name'] ?></h2>
+        <strong> Sobre  </strong>
+        <div style="width: 100%; backgound-color: #232323;">(Atualmente seu sobre está vazio)</div>
+    </div>
+   <div class="col-sm-4">
+        <strong> Atividades  </strong>
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-dark">Clara seguiu você.</li>
+          <li class="list-group-item list-group-item-light">José comentou no seu perfil.</li>
+          <li class="list-group-item list-group-item-dark">José seguiu você.</li>
+          <li class="list-group-item list-group-item-light">Votou na lista: <a href="">Melhores filmes do Leonardo DiCaprio. </a></li>
+          <li class="list-group-item list-group-item-dark">Você criou sua conta. 😃</li>
+        </ul>
+    </div>
+    <div class="col-sm-12">
+    <form class="mx-auto" style="width:50%;">
+    <div class="form-group" >
+        <label for="comentario">    <strong>Comentários:	</strong></label>
+        <textarea name="comentario" id="comentario" class="form-control" rows="3"></textarea>
+        <button class="btn btn-link" id="enviar-item" type="submit">Enviar</button>
+    </div>
+    </div>
+<?php } ?>
+  </div>
+</div>

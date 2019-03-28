@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Top Lists</title>
+	<script src="/js/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+	
+	
+<!--
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		-->
+	
+		<script src="/js/exif.js"></script>
+	
+
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">	
+	<link rel="stylesheet" href="/css/style.css">
+
+</head>
+<div class="container">
+		<header>
+			<div class="row">
+				<div class="col-md col-sm-12">
+        			<a href="/" class="header logo"><span>play</span>top☰list </a>
+				</div>
+				<div class="col-md col-sm-12">
+					<ul class="menu-list">
+						<li class="menu-item"><a class="button" href="/l/create"><span class="icon-upload inverse"></span>Enviar uma lista</a></li>
+						<?php if (($identity['id'] == null)) { ?>
+							<li class="menu-item"><a class="button" href="/login"><span class="icon-user inverse"></span>Entrar</a></li>
+						<?php } else { ?>
+							<li class="menu-item"><a class="button" href="/session/logout"><span class="icon-user inverse"></span>Sair</a></li>
+				
+						<?php } ?>
+						<!--<li class="menu-item"><a class="button" href="/l/all">Todas as listas</a></li>
+						<li class="menu-item"><a class="button" href="/category">Listas por categorias</a></li>
+					 --></ul>
+				</div>
+				<div class="col-md col-sm-12">
+					<form class="header-search">
+						<div class="row">
+							<div class="col-sm-12">
+									<div class="input-group fluid ">	
+										<input type="text" placeholder="" class="pure-input-rounded">
+								
+										<button class="normalize-button rounded shadowed">Pesquisar</button>
+										</div>	
+										
+										
+							</div>
+					
+						</div>
+						
+					</form>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="row">
+					<nav class="nav-principal">
+					<a href="">Todas as categorias</a>
+						<a href="/categoria/entretenimento">Entretenimento</a>
+						<a href="/categoria/esporte">Saúde</a>
+						<a href="">Sociedade</a>
+						<a href="">Educação</a>
+						<a href="">Dinheiro</a>
+						<a href="">Cultural</a>
+					</nav>
+				</div>
+			</div>
+		
+	</header>
+
+<div class="row">
+
+
+<div class="col-md-9 main-content">
+	
+
+<div class="row">
+<?= $this->getContent() ?>
+
+</div></div>
+
+
+<div class="col-md-3">
+			<div class="col-sm-12">
+						</div>
+						<div class="col-sm-12	">
+								<h3>Listas em destaque</h3>
+								<ul>
+										<li><a href="">lista 1</a></li>
+								</ul>
+						</div>
+						<div class="col-sm-12	">
+                <h3>Listas aleatórias</h3>
+                <ul>
+                    <li><a href="">lista 1</a></li>
+                </ul>
+            </div>
+
+
+</div>
+
+</div>
+
+<div class="row">
+<div class="col">
+				<h3>Lista mais discutidas</h3>
+				<ul>
+						<li><a href="">lista 1</a>	</li>
+				</ul>
+		</div>
+
+		<div class="col">
+				<h3>Lista mais votadas</h3>
+				<ul>
+						<li><a href="">lista 1</a>	</li>
+				</ul>
+		</div>
+
+		<div class="col">
+				<h3>Listas Clássicas</h3>
+				<ul>
+						<li><a href="">lista 1</a>	</li>
+				</ul>
+		</div>
+	</div>	</div>
+
+
+    <footer class="footer" style=" background-color:#f8f9fa;  ">
+
+
+<ul class="menu-horizontal">
+	<li><a hred="#header">INICIO</a></li>
+	<li><a hred="#header">SOBRE</a></li>
+	<li><a hred="#header">FALE CONOSCO</a></li>
+	<li><a hred="#header">PRIVACIDADE</a></li>
+</ul>
+    </footer>
+</div>
+<script src="/js/toplistas.js"></script>
+</body>
+</html>
+
+
+

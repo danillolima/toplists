@@ -1,0 +1,73 @@
+
+<script type="text/javascript">
+
+
+</script>
+
+<form action="/criar-lista/insere" method="post"  enctype="multipart/form-data" style="width: 70%;  margin-left:auto; margin-right:auto">
+
+    	<h1>Criar lista</h1>
+    <div class="form-group">
+        <label for="nameList">Nome da lista: </label> <input type="text" name="name" class="form-control"/>
+  	</div>
+
+		<div class="form-group">
+			<label for="exampleInputFile">Selecione uma imagem para a lista: </label>
+				<input type="file" name="imgUpLista" id="imgUpLista">
+
+		</div>
+
+	<div class="form-group">
+        <label for="description">Descrição:	</label>
+        <textarea name="description" id="description"  class="form-control" rows="5"></textarea>
+    </div>
+
+
+    <div class="form-group">
+        <label for="name">Sobre o que ou quem é essa lista:	</label><input type="text" name="subject" id="itemSearch" class="form-control"/>
+    </div>
+	<div id="img-item" class="form-group" >
+		<div id="img-inside" class="form-group" >
+		</div>
+	</div>
+
+    <div class="form-group">
+        <label for="name">Tipo de lista: <input name="optList" value="1" type="radio" checked="checked"/>Subjetiva <input name="optList" type="radio" value="0" /> Objetiva  </label>
+	</div>
+
+  <div class="form-group hideMenu" style="height: 70px"	 id="opt1">
+  <label class="form-check-label">
+    <input class="form-check-input" name="votavel" value="1" type="checkbox"/>
+  	Votável
+  </label>
+</div>
+
+ <div class="form-group hideMenu" style="display: none;" id="opt0">
+    <label for="name" >Fonte: </label> <input class ="form-control" name="source" value="" type="text"/>
+   </div>
+
+    <div class="form-group">
+
+    Categoria: <select class="form-control" id="category" name="category">
+
+		<?php foreach ($categorys as $category) { ?>
+				 <?php if (($category->id_parent === null)) { ?>
+				 		<option value="<?= $category->id ?>"> <?= $category->name ?></option>
+
+						<?php foreach ($subcategorys as $subCategory) { ?>
+							<?php if (($subCategory->id_parent === $category->id)) { ?>
+									<option value="<?= $subCategory->id ?>">&emsp;<?= $subCategory->name ?> </option>
+							<?php } ?>
+						<?php } ?>
+
+					<?php } ?>
+		<?php } ?>
+
+			  </select>
+   </div>
+   <div class="form-group">
+        <?php echo $this->tag->submitButton("Criar"); ?>
+   </div>
+
+
+</form>

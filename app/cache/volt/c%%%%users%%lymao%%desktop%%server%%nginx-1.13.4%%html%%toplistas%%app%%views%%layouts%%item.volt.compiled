@@ -1,0 +1,18 @@
+<?php if (($item)) { ?>
+<div class="col-md-12">
+
+    <h1> <?= $item->name ?> </h1>
+    <p><?= $item->description ?></p>
+    <h2>Galeria</h2>
+
+    <div class="row">
+    <?php foreach ($item->media as $media) { ?>
+    <div class="col-md-4">
+        <img width="300" src="..<?= $media->url ?>"/>
+    </div>
+    <?php } ?>
+    </div>
+</div>
+<?php } else { ?>
+Não encontrado.
+<?php } ?>
