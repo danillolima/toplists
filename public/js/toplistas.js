@@ -256,9 +256,7 @@ $(function(){
 
 
 
-
-
-	document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 function demoUpload() {
 	
 	var blob
@@ -270,7 +268,7 @@ function demoUpload() {
 		if(croppieImg != undefined)
 			croppieImg.destroy();
 
-		console.log('aaaa1')
+		
 
 		if (input.files && input.files[0]) {
 			var reader = new FileReader();
@@ -330,13 +328,15 @@ function demoUpload() {
 		croppieImg.result('base64').then(function(blob) {
 			$('#img-preview').attr('src', blob);
 		});
-	});
-	document.querySelector('#up-img').addEventListener('change', function(){
-		readFile(this)
-	})
-} 
+		});
+		document.querySelector('#up-img').addEventListener('change', function(){
+			readFile(this)
+		})
+
+
+	} 
 demoUpload();
-	})
+})
 
 
 function toggleVideo(){
