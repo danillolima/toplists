@@ -1,0 +1,19 @@
+class Notification
+!!!134786.php!!!	initialize()
+
+        $this->setSource('tl_notification');
+        $this->belongsTo(
+            'type_not',
+            'NotifyType',
+            'id'
+        );
+        $this->belongsTo(
+            'author_notify',
+            'User',
+            'id'
+        );
+        $this->belongsTo(
+            'user_notify',
+            'User',
+            'id'
+        );

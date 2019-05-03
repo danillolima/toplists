@@ -1,0 +1,705 @@
+format 221
+"models-metadata" // app::cache::models-metadata
+  revision 1
+  modified_by 2 "lymao"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  php_dir "C:\\Users\\lymao\\Desktop\\Server\\nginx-1.13.4\\html\\toplistas\\app/cache/models-metadata/"
+  deploymentview 128002 "models-metadata"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128002 "map-category"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => NULL,
+  1 => NULL,
+); "
+      associated_elems
+      end
+    end
+
+    artifact 128130 "map-item"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => NULL,
+  1 => NULL,
+); "
+      associated_elems
+      end
+    end
+
+    artifact 128258 "map-itemmedia"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => NULL,
+  1 => NULL,
+); "
+      associated_elems
+      end
+    end
+
+    artifact 128386 "map-listitem"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => NULL,
+  1 => NULL,
+); "
+      associated_elems
+      end
+    end
+
+    artifact 128514 "map-lists"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => NULL,
+  1 => NULL,
+); "
+      associated_elems
+      end
+    end
+
+    artifact 128642 "map-media"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => NULL,
+  1 => NULL,
+); "
+      associated_elems
+      end
+    end
+
+    artifact 128770 "map-user"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => NULL,
+  1 => NULL,
+); "
+      associated_elems
+      end
+    end
+
+    artifact 128898 "map-vote"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => NULL,
+  1 => NULL,
+); "
+      associated_elems
+      end
+    end
+
+    artifact 129026 "meta-category-tl_category"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => 
+  array (
+    0 => 'id',
+    1 => 'name',
+    2 => 'description',
+    3 => 'is_menu',
+    4 => 'url',
+    5 => 'id_parent',
+  ),
+  1 => 
+  array (
+    0 => 'id',
+  ),
+  2 => 
+  array (
+    0 => 'name',
+    1 => 'description',
+    2 => 'is_menu',
+    3 => 'url',
+    4 => 'id_parent',
+  ),
+  3 => 
+  array (
+    0 => 'id',
+  ),
+  4 => 
+  array (
+    'id' => 0,
+    'name' => 2,
+    'description' => 6,
+    'is_menu' => 0,
+    'url' => 2,
+    'id_parent' => 0,
+  ),
+  5 => 
+  array (
+    'id' => true,
+    'is_menu' => true,
+    'id_parent' => true,
+  ),
+  8 => 'id',
+  9 => 
+  array (
+    'id' => 1,
+    'name' => 2,
+    'description' => 2,
+    'is_menu' => 1,
+    'url' => 2,
+    'id_parent' => 1,
+  ),
+  10 => 
+  array (
+  ),
+  11 => 
+  array (
+  ),
+  12 => 
+  array (
+    'name' => NULL,
+    'description' => NULL,
+    'is_menu' => NULL,
+    'url' => NULL,
+    'id_parent' => NULL,
+  ),
+  13 => 
+  array (
+  ),
+); "
+      associated_elems
+      end
+    end
+
+    artifact 129154 "meta-item-tl_item"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => 
+  array (
+    0 => 'id',
+    1 => 'name',
+    2 => 'description',
+    3 => 'url',
+    4 => 'author_item',
+    5 => 'url_external',
+    6 => 'code_external',
+    7 => 'created',
+    8 => 'is_public',
+  ),
+  1 => 
+  array (
+    0 => 'id',
+  ),
+  2 => 
+  array (
+    0 => 'name',
+    1 => 'description',
+    2 => 'url',
+    3 => 'author_item',
+    4 => 'url_external',
+    5 => 'code_external',
+    6 => 'created',
+    7 => 'is_public',
+  ),
+  3 => 
+  array (
+    0 => 'id',
+    1 => 'author_item',
+    2 => 'created',
+    3 => 'is_public',
+  ),
+  4 => 
+  array (
+    'id' => 0,
+    'name' => 2,
+    'description' => 6,
+    'url' => 2,
+    'author_item' => 0,
+    'url_external' => 6,
+    'code_external' => 6,
+    'created' => 17,
+    'is_public' => 0,
+  ),
+  5 => 
+  array (
+    'id' => true,
+    'author_item' => true,
+    'is_public' => true,
+  ),
+  8 => 'id',
+  9 => 
+  array (
+    'id' => 1,
+    'name' => 2,
+    'description' => 2,
+    'url' => 2,
+    'author_item' => 1,
+    'url_external' => 2,
+    'code_external' => 2,
+    'created' => 2,
+    'is_public' => 1,
+  ),
+  10 => 
+  array (
+  ),
+  11 => 
+  array (
+  ),
+  12 => 
+  array (
+    'name' => NULL,
+    'description' => NULL,
+    'url' => NULL,
+    'url_external' => NULL,
+    'code_external' => NULL,
+    'created' => 'CURRENT_TIMESTAMP',
+    'is_public' => '0',
+  ),
+  13 => 
+  array (
+  ),
+); "
+      associated_elems
+      end
+    end
+
+    artifact 129282 "meta-listitem-tl_list_item"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => 
+  array (
+    0 => 'id',
+    1 => 'id_list',
+    2 => 'id_item',
+    3 => 'author',
+    4 => 'votes',
+    5 => 'url',
+  ),
+  1 => 
+  array (
+    0 => 'id',
+  ),
+  2 => 
+  array (
+    0 => 'id_list',
+    1 => 'id_item',
+    2 => 'author',
+    3 => 'votes',
+    4 => 'url',
+  ),
+  3 => 
+  array (
+    0 => 'id',
+    1 => 'id_list',
+    2 => 'id_item',
+    3 => 'author',
+  ),
+  4 => 
+  array (
+    'id' => 0,
+    'id_list' => 0,
+    'id_item' => 0,
+    'author' => 0,
+    'votes' => 0,
+    'url' => 2,
+  ),
+  5 => 
+  array (
+    'id' => true,
+    'id_list' => true,
+    'id_item' => true,
+    'author' => true,
+    'votes' => true,
+  ),
+  8 => 'id',
+  9 => 
+  array (
+    'id' => 1,
+    'id_list' => 1,
+    'id_item' => 1,
+    'author' => 1,
+    'votes' => 1,
+    'url' => 2,
+  ),
+  10 => 
+  array (
+  ),
+  11 => 
+  array (
+  ),
+  12 => 
+  array (
+    'votes' => '0',
+    'url' => NULL,
+  ),
+  13 => 
+  array (
+  ),
+); "
+      associated_elems
+      end
+    end
+
+    artifact 129410 "meta-lists-tl_list"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => 
+  array (
+    0 => 'id',
+    1 => 'name',
+    2 => 'url',
+    3 => 'description',
+    4 => 'id_subject',
+    5 => 'list_type',
+    6 => 'source',
+    7 => 'id_media',
+    8 => 'id_user',
+    9 => 'id_category',
+    10 => 'created',
+  ),
+  1 => 
+  array (
+    0 => 'id',
+  ),
+  2 => 
+  array (
+    0 => 'name',
+    1 => 'url',
+    2 => 'description',
+    3 => 'id_subject',
+    4 => 'list_type',
+    5 => 'source',
+    6 => 'id_media',
+    7 => 'id_user',
+    8 => 'id_category',
+    9 => 'created',
+  ),
+  3 => 
+  array (
+    0 => 'id',
+    1 => 'id_subject',
+    2 => 'id_user',
+    3 => 'id_category',
+    4 => 'created',
+  ),
+  4 => 
+  array (
+    'id' => 0,
+    'name' => 2,
+    'url' => 2,
+    'description' => 2,
+    'id_subject' => 0,
+    'list_type' => 0,
+    'source' => 2,
+    'id_media' => 0,
+    'id_user' => 0,
+    'id_category' => 0,
+    'created' => 17,
+  ),
+  5 => 
+  array (
+    'id' => true,
+    'id_subject' => true,
+    'list_type' => true,
+    'id_media' => true,
+    'id_user' => true,
+    'id_category' => true,
+  ),
+  8 => 'id',
+  9 => 
+  array (
+    'id' => 1,
+    'name' => 2,
+    'url' => 2,
+    'description' => 2,
+    'id_subject' => 1,
+    'list_type' => 1,
+    'source' => 2,
+    'id_media' => 1,
+    'id_user' => 1,
+    'id_category' => 1,
+    'created' => 2,
+  ),
+  10 => 
+  array (
+  ),
+  11 => 
+  array (
+  ),
+  12 => 
+  array (
+    'name' => NULL,
+    'url' => NULL,
+    'description' => NULL,
+    'list_type' => NULL,
+    'source' => NULL,
+    'id_media' => NULL,
+    'created' => 'CURRENT_TIMESTAMP',
+  ),
+  13 => 
+  array (
+  ),
+); "
+      associated_elems
+      end
+    end
+
+    artifact 129538 "meta-media-tl_media"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => 
+  array (
+    0 => 'id',
+    1 => 'type',
+    2 => 'description',
+    3 => 'url',
+    4 => 'author_media',
+  ),
+  1 => 
+  array (
+    0 => 'id',
+  ),
+  2 => 
+  array (
+    0 => 'type',
+    1 => 'description',
+    2 => 'url',
+    3 => 'author_media',
+  ),
+  3 => 
+  array (
+    0 => 'id',
+  ),
+  4 => 
+  array (
+    'id' => 0,
+    'type' => 0,
+    'description' => 6,
+    'url' => 2,
+    'author_media' => 0,
+  ),
+  5 => 
+  array (
+    'id' => true,
+    'type' => true,
+    'author_media' => true,
+  ),
+  8 => 'id',
+  9 => 
+  array (
+    'id' => 1,
+    'type' => 1,
+    'description' => 2,
+    'url' => 2,
+    'author_media' => 1,
+  ),
+  10 => 
+  array (
+  ),
+  11 => 
+  array (
+  ),
+  12 => 
+  array (
+    'type' => NULL,
+    'description' => NULL,
+    'url' => NULL,
+    'author_media' => NULL,
+  ),
+  13 => 
+  array (
+  ),
+); "
+      associated_elems
+      end
+    end
+
+    artifact 129666 "meta-user-tl_user"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => 
+  array (
+    0 => 'id',
+    1 => 'username',
+    2 => 'name',
+    3 => 'about',
+    4 => 'pass',
+    5 => 'email',
+    6 => 'is_mod',
+    7 => 'qtd_comments',
+    8 => 'qtd_lists',
+    9 => 'qtd_itens',
+    10 => 'registered',
+  ),
+  1 => 
+  array (
+    0 => 'id',
+  ),
+  2 => 
+  array (
+    0 => 'username',
+    1 => 'name',
+    2 => 'about',
+    3 => 'pass',
+    4 => 'email',
+    5 => 'is_mod',
+    6 => 'qtd_comments',
+    7 => 'qtd_lists',
+    8 => 'qtd_itens',
+    9 => 'registered',
+  ),
+  3 => 
+  array (
+    0 => 'id',
+    1 => 'username',
+    2 => 'registered',
+  ),
+  4 => 
+  array (
+    'id' => 0,
+    'username' => 2,
+    'name' => 2,
+    'about' => 6,
+    'pass' => 2,
+    'email' => 2,
+    'is_mod' => 0,
+    'qtd_comments' => 0,
+    'qtd_lists' => 0,
+    'qtd_itens' => 0,
+    'registered' => 17,
+  ),
+  5 => 
+  array (
+    'id' => true,
+    'is_mod' => true,
+    'qtd_comments' => true,
+    'qtd_lists' => true,
+    'qtd_itens' => true,
+  ),
+  8 => 'id',
+  9 => 
+  array (
+    'id' => 1,
+    'username' => 2,
+    'name' => 2,
+    'about' => 2,
+    'pass' => 2,
+    'email' => 2,
+    'is_mod' => 1,
+    'qtd_comments' => 1,
+    'qtd_lists' => 1,
+    'qtd_itens' => 1,
+    'registered' => 2,
+  ),
+  10 => 
+  array (
+  ),
+  11 => 
+  array (
+  ),
+  12 => 
+  array (
+    'name' => NULL,
+    'about' => NULL,
+    'pass' => NULL,
+    'email' => NULL,
+    'is_mod' => NULL,
+    'qtd_comments' => '0',
+    'qtd_lists' => '0',
+    'qtd_itens' => '0',
+    'registered' => 'CURRENT_TIMESTAMP',
+  ),
+  13 => 
+  array (
+  ),
+); "
+      associated_elems
+      end
+    end
+
+    artifact 129794 "meta-vote-tl_vote"
+      stereotype "source"
+      php_src "<?php return array (
+  0 => 
+  array (
+    0 => 'id',
+    1 => 'author_vote',
+    2 => 'vote',
+    3 => 'item_voted',
+  ),
+  1 => 
+  array (
+    0 => 'id',
+  ),
+  2 => 
+  array (
+    0 => 'author_vote',
+    1 => 'vote',
+    2 => 'item_voted',
+  ),
+  3 => 
+  array (
+    0 => 'id',
+  ),
+  4 => 
+  array (
+    'id' => 0,
+    'author_vote' => 0,
+    'vote' => 0,
+    'item_voted' => 0,
+  ),
+  5 => 
+  array (
+    'id' => true,
+    'author_vote' => true,
+    'vote' => true,
+    'item_voted' => true,
+  ),
+  8 => 'id',
+  9 => 
+  array (
+    'id' => 1,
+    'author_vote' => 1,
+    'vote' => 1,
+    'item_voted' => 1,
+  ),
+  10 => 
+  array (
+  ),
+  11 => 
+  array (
+  ),
+  12 => 
+  array (
+    'author_vote' => NULL,
+    'vote' => NULL,
+    'item_voted' => NULL,
+  ),
+  13 => 
+  array (
+  ),
+); "
+      associated_elems
+      end
+    end
+  end
+end

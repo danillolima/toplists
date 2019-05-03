@@ -1,0 +1,14 @@
+class Message
+!!!134658.php!!!	initialize()
+
+        $this->setSource('tl_message');
+        $this->belongsTo(
+            'to_destinatary',
+            'User',
+            'id'
+        );
+        $this->belongsTo(
+            'from_author',
+            'User',
+            'id'
+        );

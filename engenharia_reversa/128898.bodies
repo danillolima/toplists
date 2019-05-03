@@ -1,0 +1,8 @@
+class IndexController
+!!!129922.php!!!	indexAction()
+
+		
+   		$posts = Lists::find([
+   				'limit' => 10
+   		]);
+   		$this->view->posts = $posts;

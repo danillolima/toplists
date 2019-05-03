@@ -1,0 +1,19 @@
+class CategoryController
+!!!129154.php!!!	indexAction()
+
+		$this->view->setTemplateAfter("categories");
+		$this->view->categorys = Category::find(['order' => 'name' ]);
+!!!129282.php!!!	showAction(in cat : )
+
+		$this->view->setTemplateAfter("single-category");
+		$cat = '/category/' . $cat;
+		$category = Category::findFirstByUrl($cat);
+		$this->view->category = $category;
+		$this->view->lists = Lists::find(['id_category = :id:',
+										  'bind' => [
+										  'id' => $category->id,
+										 ],
+										]);
+!!!129410.php!!!	allAction()
+
+

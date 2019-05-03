@@ -1,0 +1,15 @@
+class ListItem
+!!!134274.php!!!	initialize()
+
+		$this->setSource('tl_list_item');
+    $this->belongsTo(
+           'id_item',
+           'Item',
+           'id'
+       );
+
+       $this->belongsTo(
+           'id_list',
+           'Lists',
+           'id'
+       );

@@ -1,0 +1,9 @@
+class Report
+!!!135042.php!!!	initialize()
+
+        $this->setSource('tl_report');
+        $this->belongsTo(
+            'author',
+            'User',
+            'id'
+        );

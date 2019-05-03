@@ -1,0 +1,22 @@
+class Media
+!!!134530.php!!!	initialize()
+
+		$this->setSource('tl_media');
+
+		$this->hasManyToMany(
+	          'id',
+	          'ItemMedia',
+	          'id_media', 'id_item',
+            'Item',
+	         	'id'
+		        );
+		$this->belongsTo(
+							'id',
+							'Lists',
+							'id_media'
+						);
+		$this->belongsTo(
+			'author_media',
+			'User',
+			'id'
+		);

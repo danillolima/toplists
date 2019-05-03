@@ -1,0 +1,9 @@
+class Comment
+!!!133762.php!!!	initialize()
+
+        $this->setSource('tl_comment');
+        $this->belongsTo(
+            'author_comment',
+            'User',
+            'id'
+        );

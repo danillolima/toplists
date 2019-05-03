@@ -47,7 +47,7 @@
 					 --></ul>
 				</div>
 				<div class="col-md col-sm-12">
-					<form class="header-search">
+					<form class="header-search" method="get" action="/search?q=">
 						<div class="row">
 							<div class="col-sm-12">
 									<div class="input-group fluid ">	
@@ -70,11 +70,11 @@
 					<nav class="nav-principal">
 					<a href="/category">Todas as categorias</a>
 
-						<?php $v42354015591iterator = $menu; $v42354015591incr = 0; $v42354015591loop = new stdClass(); $v42354015591loop->self = &$v42354015591loop; $v42354015591loop->length = count($v42354015591iterator); $v42354015591loop->index = 1; $v42354015591loop->index0 = 1; $v42354015591loop->revindex = $v42354015591loop->length; $v42354015591loop->revindex0 = $v42354015591loop->length - 1; ?><?php foreach ($v42354015591iterator as $item) { ?><?php $v42354015591loop->first = ($v42354015591incr == 0); $v42354015591loop->index = $v42354015591incr + 1; $v42354015591loop->index0 = $v42354015591incr; $v42354015591loop->revindex = $v42354015591loop->length - $v42354015591incr; $v42354015591loop->revindex0 = $v42354015591loop->length - ($v42354015591incr + 1); $v42354015591loop->last = ($v42354015591incr == ($v42354015591loop->length - 1)); ?>
+						<?php foreach ($menu as $item) { ?>
 							<?php if (($item->is_menu == 1)) { ?>
 								<a href="<?= $item->url ?>"> <?= $item->name ?> </a>
 							<?php } ?>
-						<?php $v42354015591incr++; } ?>
+						<?php } ?>
 					
 						<!--<a href="/category/entretenimento">Entretenimento</a>
 						<a href="/category/esporte">Saúde</a>

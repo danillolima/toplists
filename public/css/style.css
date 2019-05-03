@@ -727,6 +727,12 @@ background-image: url('/assets/img/thumbs-down.svg');
     flex-wrap: wrap;
 }
 .category-list li{
-
     padding: 2rem;
+}
+nav a:hover, nav a:focus, nav a:visited:hover, nav a:visited:focus {
+    text-decoration: none;
+    background: transparent;
+}
+header .normalize-button:focus, .normalize-button:hover{
+    background: #f8f8f8;
 }

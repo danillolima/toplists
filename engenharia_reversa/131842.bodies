@@ -1,0 +1,15 @@
+class User
+!!!135170.php!!!	initialize()
+
+		$this->setSource('tl_user');
+		$this->hasMany(
+			'id',
+			'Comment',
+			'author_comment'
+		);
+		$this->hasMany(
+			'id',
+			'Follows',
+			'following'
+		);
+		

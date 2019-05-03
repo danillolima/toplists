@@ -317,24 +317,25 @@ function demoUpload() {
 				
 		}
 		reader.readAsDataURL(input.files[0]);
-}
+			}
 				else {
 					swal("Seu navegador não suporta o FileReader API");
 			}
 	}
 	
-
-	croppieEl.addEventListener('update', function(ev) { 
-		croppieImg.result('base64').then(function(blob) {
-			$('#img-preview').attr('src', blob);
+	if(croppieEl != undefined){
+		croppieEl.addEventListener('update', function(ev) { 
+			croppieImg.result('base64').then(function(blob) {
+				$('#img-preview').attr('src', blob);
+			});
 		});
-		});
+	
 		document.querySelector('#up-img').addEventListener('change', function(){
-			readFile(this)
-		})
+				readFile(this)
+			});
+	}
+}
 
-
-	} 
 demoUpload();
 })
 
@@ -404,33 +405,36 @@ $(document).ready(function(){
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-	var list
-	var autoComplete = new Awesomplete(document.querySelector("#autoname input"),{ list: list });
-	var ajax = new XMLHttpRequest();
-	txtName.addEventListener('keydown', () => {
-		var params = 'busca=' + txtName.value;
-		ajax.open("POST", "/item/search", true);
-		ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-		ajax.onload = function(e) {
-			var list = JSON.parse(ajax.responseText).map(function(i) { return i.name; });
-			if(list.length)
-				console.log('achou algo');
-				else 
-				console.log('achou nada');
-			autoComplete.list = list;
-		};
-		ajax.send(params);
-	});
-	var el = document.querySelector("#autoname");
-			el.addEventListener('awesomplete-selectcomplete', function(){
-				hideTL('#hideD')
-				var params = 'busca=' + txtName.value;
-				ajax.open("POST", "/item/searchComplete", true);
-				ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-				ajax.onload = function(e) {
-					console.log(ajax.responseText);
-				};
-		ajax.send(params);
-			});
+	var list;
+	let input = document.querySelector("#autoname input");
+	if(input != undefined){
+		var autoComplete = new Awesomplete(input, { list: list });
+		var ajax = new XMLHttpRequest();
+		txtName.addEventListener('keydown', () => {
+			var params = 'busca=' + txtName.value;
+			ajax.open("POST", "/item/search", true);
+			ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+			ajax.onload = function(e) {
+				var list = JSON.parse(ajax.responseText).map(function(i) { return i.name; });
+				if(list.length)
+					console.log('achou algo');
+					else 
+					console.log('achou nada');
+				autoComplete.list = list;
+			};
+			ajax.send(params);
+		});
+		var el = document.querySelector("#autoname");
+				el.addEventListener('awesomplete-selectcomplete', function(){
+					hideTL('#hideD')
+					var params = 'busca=' + txtName.value;
+					ajax.open("POST", "/item/searchComplete", true);
+					ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+					ajax.onload = function(e) {
+						console.log(ajax.responseText);
+					};
+			ajax.send(params);
+				});
+		}
 });
 

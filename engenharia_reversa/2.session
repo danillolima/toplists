@@ -1,0 +1,16 @@
+window_sizes 1280 637 320 955 485 104
+
+show_stereotypes
+selected class_ref 128514 // CategoryController
+open
+  
+  package_ref 128130 // cache
+  deploymentview_ref 128130 // controllers
+  class_ref 129666 // SessionController
+  deploymentview_ref 128258 // Auth
+  classview_ref 128258 // Auth
+  deploymentview_ref 128386 // models
+  
+  package_ref 128514 // unknown
+end
+end

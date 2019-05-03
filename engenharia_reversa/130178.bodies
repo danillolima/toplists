@@ -1,0 +1,9 @@
+class Category
+!!!133634.php!!!	initialize()
+
+		$this->setSource('tl_category');
+		$this->belongsTo(
+				'id',
+				'Lists',
+				'id_category'
+		);

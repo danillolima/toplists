@@ -47,7 +47,7 @@
 					 --></ul>
 				</div>
 				<div class="col-md col-sm-12">
-					<form class="header-search">
+					<form class="header-search" method="get" action="/search?q=">
 						<div class="row">
 							<div class="col-sm-12">
 									<div class="input-group fluid ">	
