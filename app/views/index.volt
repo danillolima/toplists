@@ -47,11 +47,11 @@
 					 --></ul>
 				</div>
 				<div class="col-md col-sm-12">
-					<form class="header-search" method="get" action="/search?q=">
+					<form class="header-search" method="get" action="/search">
 						<div class="row">
 							<div class="col-sm-12">
 									<div class="input-group fluid ">	
-										<input type="text" placeholder="" class="pure-input-rounded">
+										<input type="text" placeholder="" name="q" class="pure-input-rounded">
 								
 										<button class="normalize-button rounded shadowed">Pesquisar</button>
 										</div>	
@@ -60,8 +60,6 @@
 							</div>
 					
 						</div>
-						
-					</form>
 					</form>
 				</div>
 			</div>

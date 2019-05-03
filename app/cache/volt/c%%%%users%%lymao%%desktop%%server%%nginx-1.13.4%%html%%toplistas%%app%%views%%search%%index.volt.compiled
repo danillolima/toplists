@@ -1,0 +1,5 @@
+<ul>
+<?php foreach ($lists as $list) { ?>
+    <li><a href="<?= $list->url ?>"> <?= $list->name ?> </a></li>
+<?php } ?>
+</ul>
