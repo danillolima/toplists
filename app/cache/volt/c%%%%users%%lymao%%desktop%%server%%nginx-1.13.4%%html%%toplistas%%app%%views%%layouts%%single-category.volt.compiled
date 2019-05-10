@@ -2,7 +2,7 @@
 <h1><?= $category->name ?></h1>
 <ul>
 <?php foreach ($lists as $list) { ?>
-<li> <?= $list->name ?> </li>
+<li> <a title="<?= $list->name ?>" href="<?= $list->url ?>"> <?= $list->name ?> </a></li>
 <?php } ?>
 </ul>
 <?php } else { ?>

@@ -2,7 +2,7 @@
 <h1>{{ category.name }}</h1>
 <ul>
 {% for list in lists %}
-<li> {{ list.name }} </li>
+<li> <a title="{{list.name}}" href="{{ list.url }}"> {{ list.name }} </a></li>
 {% endfor %}
 </ul>
 {% else %}

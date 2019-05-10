@@ -137,7 +137,7 @@
 			</div> 
 			<h2><a href="{{ item_data.item.url }}">{{loop.index}}. {{ item_data.item.name }}</a> <span class="numero-votos"> ({{item_data.votes}} Votos) </span></h2>
 			<p>{{ item_data.item.description }}</p>
-			<div style="float: right"><a href="/api/lists/removeItemm/{{query.id}}?item={{ item_data.item.id }}">Excluir</a></div>
+			<div style="float: right"><a href="/api/lists/removeItem/{{query.id}}?item={{ item_data.item.id }}">Excluir</a></div>
 		</div>
 	</div>
 			<!-- end ITEM -->

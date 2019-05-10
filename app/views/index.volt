@@ -93,10 +93,8 @@
 <div class="col-md-9 main-content">
 	
 
-<div class="row">
 {{ get_content() }}
 
-</div>
 
 
 

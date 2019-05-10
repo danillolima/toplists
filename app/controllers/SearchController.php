@@ -14,7 +14,9 @@ class SearchController extends ControllerBase{
                 'busca' => '%'.$search.'%',
             ],
         ]);
+        var_dump($lists);
         $this->view->lists = $lists;
+        $this->view->search = $search;
         /*
         //json_encode($lists);
         foreach ($lists as $list) {
