@@ -385,37 +385,42 @@ Cria lista
 		}
 	}
 	
-/* funcções de api 
+/*
 			/api/lists/insertItem/id
 	*/
 	public function insertItemAction($id){
 		$this->view->disable();
 	//	if ($this->request->isAjax()) {
 		if ($this->request->isPost()) {
+	
 			$name = $this->request->getPost("name");
+			$item = Item::findFirstByName($name);
+
 			$typeMedia = $this->request->getPost("media");
 			$description = $this->request->getPost("description");
 			$identity = $this->auth->getIdentity();
 			$user = new User();
-			$item = new Item();
 			
-			$item->name = $name;
-			$item->url = '/i/' . $this->cleanURL($name);
-			$item->description = $description;
-			$item->is_public = 0;
-			$item->author_item = $identity["id"];
-			$item->created = date('Y-m-d H:i:s');
+			if(!$item){
+				//Se o item não foi encontrado 
+				$item = new Item();
+				$item->name = $name;
+				$item->url = '/i/' . $this->cleanURL($name);
+				$item->description = $description;
+				$item->is_public = 0;
+				$item->author_item = $identity["id"];
+				$item->created = date('Y-m-d H:i:s');
 
-			if($item->create()){
-				echo "Item criado com sucesso";
-			}
-			else{
-				echo "Erro ao criar item";
-				foreach ($item->getMessages() as $message) {
-					echo $message;
-					echo $identity["id"], '2';
+				if($item->create()){
+					echo "Item criado com sucesso";
 				}
-			}
+				else{
+					echo "Erro ao criar item";
+					foreach ($item->getMessages() as $message) {
+						echo $message;
+						echo $identity["id"], '2';
+					}
+				}
 			// 1 = imagem, 2 = videos
 			if($typeMedia == 1){
 				if($this->request->hasFiles(true) == true){
@@ -436,7 +441,7 @@ Cria lista
 								else{
 									echo "erro";
 								}
-						}
+					}
 				}
 			}
 			else if($typeMedia == 2){
@@ -447,6 +452,7 @@ Cria lista
 				$media->create();
 				$item->Media = $media;
 			}
+		}
 	
 			$addTo = Lists::findFirstById($id);
 			$relacao = new ListItem();
@@ -455,23 +461,21 @@ Cria lista
 			$relacao->votes = 0;
 			$relacao->author = $item->author_item;
 			$relacao->url = "teste";
-			echo $relacao->save();
-
-
+			if($relacao->save()){
+				$this->response->redirect($addTo->url);
+			}
 
 			//$addTo->Item = $item;
 			//echo $addTo->name;
 			//$addTo->update();
-
-			 try{
-					
+			try{					
 				
-			 }catch(\Exception $e){
-				foreach (	$addTo->getMessages() as $message) {
-					echo $message, "\n";
-			}
-				// echo $e->message();
-			 }
+			} catch(\Exception $e){
+					foreach (	$addTo->getMessages() as $message) {
+						echo $message, "\n";
+					}
+					// echo $e->message();
+				}
 	}
 }
  //api/lists/removeItem/ID?item=ID

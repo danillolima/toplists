@@ -5,8 +5,11 @@ use Phalcon\Http\Request;
 use Phalcon\Http\Response;
 
 class ItemController extends ControllerBase{
+		// /item
 		public function indexAction(){
-            $this->view->item = 0;
+			$this->view->item = 0;
+			$response = new Response();
+			$this->response->redirect('/');
 		}
 
 		public function showAction($item){
@@ -18,12 +21,10 @@ class ItemController extends ControllerBase{
 
 		public function searchAction(){
 			$this->view->disable();
-			$request = new Request();
-			$response = new Response();
-			$response->setHeader("Content-type", "application/json;charset=utf-8");
 
-		//	if ($request->isPost()) {
-//if ($request->isAjax()) {
+			$this->response->setHeader("Content-type", "application/json;charset=utf-8");
+			if ($this->request->isPost()) {
+			//	if ($this->request->isAjax()) {
 					$busca = $this->request->getPost('busca');
 					$items = Item::find(
 							[
@@ -39,9 +40,9 @@ class ItemController extends ControllerBase{
 							$itemsArray[] = ['name' => $item->name];
 						}
 
-					$response->setContent( json_encode($itemsArray) )	;
-					return $response;
-			///	}
+					$this->response->setContent( json_encode($itemsArray) )	;
+					return $this->response;
+				}
 			//}
 		}
 		//deleta um item por id

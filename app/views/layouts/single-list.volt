@@ -1,10 +1,7 @@
-
-
 {% if(query) %}
 
 <div class="col-md-12">
 {% if(params === "editar") %}
-
 	<form method="post" id="form-edit" enctype="multipart/form-data" >
 	<h1>Editar lista</h1>
 	<div id="response" role="alert"></div>
