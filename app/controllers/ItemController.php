@@ -41,7 +41,7 @@ class ItemController extends ControllerBase{
 						}
 
 					$this->response->setContent( json_encode($itemsArray) )	;
-					return $this->response;
+					return $this->	response;
 				}
 			//}
 		}

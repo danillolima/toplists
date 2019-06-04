@@ -1,2 +1,9 @@
+*
+!composer.json
+!readme.md
+!app\
+!docs\
+!engenharia_reversa
+!tests
 toplistas\public\uploads\media\*
 toplistas\app\cache\*
