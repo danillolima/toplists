@@ -1,7 +1,0 @@
-class SessionController
-!!!132994.php!!!	logoutAction()
-
-    $this->session->destroy();
-    $response = new Response();
-		$response->redirect('index');
-    return $response;

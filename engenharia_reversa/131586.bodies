@@ -1,5 +1,0 @@
-class NotifyType
-!!!134914.php!!!	initialize()
-
-        $this->setSource('tl_notif_type');
-        
