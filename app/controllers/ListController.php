@@ -6,13 +6,13 @@ use Phalcon\Http\Response;
 class ListController extends ControllerBase{
     public function indexAction(){
 	  $response = new Response();
-	  /*
-      if(!$this->session->has('auth-identity') ){
-        $response->redirect('/');
-        return $response;
-      }*/
-		$response->setContent("Sorry, the page doesn't exist");
-		$this->response->setContentType('text/html', 'iso-8859-1');
+			/*
+				if(!$this->session->has('auth-identity') ){
+					$response->redirect('/');
+					return $response;
+				}*/
+			$response->setContent("Sorry, the page doesn't exist");
+			$this->response->setContentType('text/html', 'iso-8859-1');
     }
 
     public function showAction($params){

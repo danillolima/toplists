@@ -46,6 +46,10 @@ class ControllerBase extends Controller{
 			}
 			$menu = Category::find();
 			$this->view->menu = $menu;
+
+			$this->view->listasDestaque = Lists::find([
+					'limit' => 10
+				]);
 		}
 		public function cleanURL($url){
     	setlocale(LC_ALL, 'pt_BR.UTF8');

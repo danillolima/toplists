@@ -22,7 +22,7 @@
 	<script src="/js/croppie.js"></script>
 	<link rel="stylesheet" href="/css/awesomplete.css" />
 	<script src="/js/awesomplete.js"></script>
-
+	<script src="/js/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v3.0.1/dist/mini-default.min.css">	
 	<link rel="stylesheet" href="/css/style.css">
 
@@ -105,13 +105,21 @@
 						<div class="col-sm-12	">
 								<h3>Listas em destaque</h3>
 								<ul>
-										<li><a href="">lista 1</a></li>
+								{% for lista in listasDestaque %}
+										{% if lista.id%2==0 %}
+										<li><a href="{{lista.url}}">{{lista.name}}</a></li>
+										{% endif %}
+								{% endfor %}
 								</ul>
 						</div>
 						<div class="col-sm-12	">
                 <h3>Listas aleatórias</h3>
                 <ul>
-                    <li><a href="">lista 1</a></li>
+                    {% for lista in listasDestaque %}
+										{% if lista.id%2!=0 %}
+										<li><a href="{{lista.url}}">{{lista.name}}</a></li>
+										{% endif %}
+								{% endfor %}
                 </ul>
             </div>
 </div>

@@ -1,8 +1,15 @@
+
 <div style="width: 70%;  margin-left:auto; margin-right:auto">
 
-
-                <form class="needs-validation" method="post" action="/cadastrar/salvar">
+                <form class="needs-validation" method="post" action="signup">
                         <fieldset>
+                        <div class="msgs">
+                          <ul>
+                            {% for index in 0..(messages|length)-1 %}
+                            <li> {{ messages[index] }}</li>
+                            {% endfor %}
+                          </ul>
+                        </div>
                                   <legend>Cadastre-se</legend>
                             <div class="row responsive-label">
                                 <div class="col-md-3 col-sm-12">
