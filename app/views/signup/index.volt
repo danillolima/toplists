@@ -4,10 +4,13 @@
                 <form class="needs-validation" method="post" action="signup">
                         <fieldset>
                         <div class="msgs">
-                          <ul>
-                            {% for index in 0..(messages|length)-1 %}
-                            <li> {{ messages[index] }}</li>
-                            {% endfor %}
+                        <ul>
+                          {% if messages is defined %}
+                            {% for index in messages|keys %}
+                                {% for subind in messages[index]|keys %}
+                                 <li> <mark> {{ messages[index][subind] }}</mark></li>
+                            {% endfor %}{% endfor %}
+                          {% endif %}
                           </ul>
                         </div>
                                   <legend>Cadastre-se</legend>
@@ -25,7 +28,7 @@
                             <label for="email">E-mail</label>
                             </div>
                             <div class="col-md">
-                            <input type="email" name="mail" class="form-control">
+                            <input type="email" name="email" class="form-control">
                             </div> </div>
                             <div class="row responsive-label">
                             <div class="col-md-3 col-sm-12">

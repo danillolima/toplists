@@ -20,6 +20,7 @@ define('BASE_PATH', dirname(__DIR__));
 define('APP_PATH', BASE_PATH . '/app');
 
 require_once (APP_PATH . '/library/Auth/Auth.php');
+require_once (APP_PATH . '/library/Utils/BasicValidation.php');
 
 // Registra um autoloader
 $loader = new Loader();
@@ -41,7 +42,8 @@ $di->set(
 			'username' => 'root',
 			'password' => 'root',
 			'dbname'   => 'toplistas',
-			'charset'  => 'utf8'
+			'charset'  => 'utf8',
+			'options' => [ PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION ]
 		]);
 	}
 );
@@ -77,6 +79,7 @@ $di->setShared(
 			return $session;
 		}
 );
+
 
 $di->set(
     'flash',
@@ -164,6 +167,14 @@ $di->set(
     },
     true
 );
+
+$loader->registerNamespaces(
+    [
+	   'TopListas\Lib'    => APP_PATH . '/library/',
+	   'TopListas\Lib\Utils' => APP_PATH . '/library/Utils',
+    ]
+);
+
 
 
 $di->set(

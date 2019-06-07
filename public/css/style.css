@@ -792,3 +792,10 @@ header .nav-principal a:hover::before, header .nav-principal a:hover::after {
     margin: 0 0 1em;
     width: 100%;
 }
+
+.msgs{
+    text-align: center;
+}
+.msgs ul li{
+    margin-bottom: 10px; 
+}
