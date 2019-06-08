@@ -12,13 +12,11 @@ class SignupController extends ControllerBase
 
 			$filter = new \Phalcon\Filter();
 
-			$name = $this->request->getPost("name");
-			$surname = $this->request->getPost("surname");
-			$usern = $this->request->getPost("user");
-			$pass = $this->request->getPost("pass");
+			$usern = $this->request->getPost('user');
+			$pass = $this->request->getPost('pass');
 			$email = $this->request->getPost('email', 'email');
 
-			$usern = $filter->sanitize($usern, "trim");
+			$usern = $filter->sanitize($usern, 'trim');
 
 			$validation = new BasicValidation();
 
@@ -33,23 +31,23 @@ class SignupController extends ControllerBase
 				$user = new User();		
 				$user->is_mod = 0;
 				$user->username = $usern;
-				$user->name = $name;
+				$user->name = null;
 				$user->pass = $this->security->hash($pass);
 				$user->email = $email;
-				$user->surname = $surname;
+				$user->surname = null;
 				
 				try {
 					if($user->create()){
-						$messages["sucesso"]["form"] = "Cadastrado com sucesso.";
+						$messages['form']['sucess'] = "Cadastrado com sucesso.";
 					}
 					else{
 						$aux = $user->getMessages();
 						foreach ($aux as $message)
-							$messages["erros"]["geral"] = $message; 
+							$messages['form']['erros'] = $message; 
 					}
 				} catch (\PDOException $e) {
 					if($e->getCode() == 23000){
-						$messages["erro"]["usuario"] = "Usuário já cadastrado";
+						$messages['user']['existenceOf'] = "Usuário já cadastrado";
 					}
 				}
 			}

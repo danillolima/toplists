@@ -319,6 +319,7 @@ html .ui-autocomplete { width:1px; }
 }
 .responsive-label{
     align-items: center;
+    padding: 0.5rem 0;
 }
 .numero-votos{
     font-size: 1.0rem;
@@ -798,4 +799,13 @@ header .nav-principal a:hover::before, header .nav-principal a:hover::after {
 }
 .msgs ul li{
     margin-bottom: 10px; 
+}
+.msgResp{
+    text-align: center;  
+}
+mark.erro{
+    background: var(--input-invalid-color);
+}
+.form-1 fieldset{
+    padding: 2rem 1rem;     
 }
