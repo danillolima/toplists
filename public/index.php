@@ -81,12 +81,6 @@ $di->setShared(
 );
 
 
-$di->set(
-    'flash',
-    function () {
-        return new FlashDirect();
-    }
-);
 
 $di->setShared(
 	'modelsMetadata',
@@ -144,7 +138,6 @@ $di->set(
     }
 );
 
-
 // Register Volt as template engine
 $di->set(
     "view",
@@ -168,14 +161,21 @@ $di->set(
     true
 );
 
+$di->set('flash', function () {
+    return new FlashDirect([
+        'error' => 'alert alert-danger',
+        'success' => 'alert alert-success',
+        'notice' => 'alert alert-info',
+        'warning' => 'alert alert-warning'
+    ]);
+});
+
 $loader->registerNamespaces(
     [
 	   'TopListas\Lib'    => APP_PATH . '/library/',
 	   'TopListas\Lib\Utils' => APP_PATH . '/library/Utils',
     ]
 );
-
-
 
 $di->set(
 	'router',
@@ -320,18 +320,3 @@ try {
 } catch (\Exception $e) {
 	echo 'Exception: ', $e->getMessage();
 }
-
-/*
-// Configuração da conexão com o banco de dados
-
-			$router->add(
-				'/l/{page}',
-				[
-					'controller' => 'list',
-					'action' => 'all',
-					'params' => 2,
-				]
-			)
-			->setName('list-methods');
-
-*/

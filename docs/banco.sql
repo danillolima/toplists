@@ -182,6 +182,13 @@ CREATE OR REPLACE TABLE `tl_follows`(
 	CONSTRAINT `fk_following` FOREIGN KEY(following) REFERENCES tl_user(id)
 );
 
+CREATE OR REPLACE TABLE `tl_contact`(
+	`id` int UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	`subject` VARCHAR(200) not null,
+	`content` text not null,
+	`email` varchar(200) DEFAULT NULL
+);
+
 insert into tl_category values(1, "Jogos", "/category/jogos", NULL);
 insert into tl_category values(2, "Educação", "/category/educacao", NULL);
 insert into tl_category values(3, "Política", "/category/politica", NULL);

@@ -802,10 +802,31 @@ header .nav-principal a:hover::before, header .nav-principal a:hover::after {
 }
 .msgResp{
     text-align: center;  
+    padding: 0.6rem 1rem;     
 }
 mark.erro{
     background: var(--input-invalid-color);
 }
 .form-1 fieldset{
     padding: 2rem 1rem;     
+}
+.form-contact{
+    width: 70%;  margin-left:auto; margin-right:auto
+}
+.alert{
+    display: initial;
+    font-size: .95em;
+    line-height: 1em;
+    color: var(--mark-fore-color);
+    border-radius: var(--universal-border-radius);
+    padding: calc(var(--universal-padding)) calc(var(--universal-padding));
+}
+.alert-danger{
+    background: var(--input-invalid-color);
+    
+}
+
+.alert-success{
+    background: var(--mark-back-color);
+ 
 }

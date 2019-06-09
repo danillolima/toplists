@@ -1,8 +1,7 @@
 <div style="width: 70%;  margin-left:auto; margin-right:auto">
                 <form class="form-1" method="post" action="signup">
                         <fieldset>
-                        <div class="msgs">
-                        
+                        <div class="msgs">            
                           <ul>
                           {% if messages is defined %}
                             {% for index in messages|keys %}
