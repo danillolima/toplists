@@ -9,6 +9,7 @@ class ContactController extends ControllerBase{
 		$form = new ContactForm();
 		
 		if ($this->request->isPost()) {
+			if ($form->isValid($this->request->getPost()) != false) {
 				$contact = new Contact([
 					'email' => $this->request->getPost('email'),
 					'subject' => $this->request->getPost('subject', 'striptags'),
@@ -19,8 +20,9 @@ class ContactController extends ControllerBase{
                 } else {
                     $this->flash->success("Mensagem enviada com sucesso");
                     //Tag::resetInput();
-                }
-			
+				}
+				
+			}
 			
 		}
 		//phpinfo();
