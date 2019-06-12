@@ -33,7 +33,8 @@ $loader->registerDirs([
 	'viewsDir'       => APP_PATH . '/views/',
 	'libraryDir'     => APP_PATH . '/library/'		
 ]);
-
+$debug = new \Phalcon\Debug();
+$debug->listen();
 $di->set(
 	'db',
 	function () {

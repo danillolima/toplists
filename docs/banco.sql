@@ -189,21 +189,21 @@ CREATE OR REPLACE TABLE `tl_contact`(
 	`email` varchar(200) DEFAULT NULL
 );
 
-insert into tl_category values(1, "Jogos", "/category/jogos", NULL);
-insert into tl_category values(2, "Educação", "/category/educacao", NULL);
-insert into tl_category values(3, "Política", "/category/politica", NULL);
-insert into tl_category values(4, "Ambiente", "/category/ambiente", NULL);
-insert into tl_category values(5, "Artes e Entetenimento", "/category/artes-e-entretenimento", NULL);
-insert into tl_category values(6, "Animes", "/category/animes", NULL);
-insert into tl_category values(7, "Mangás", "/category/mangas", NULL);
-insert into tl_category values(8, "Videos", "/category/videos", NULL);
-insert into tl_category values(9, "Esportes", "/category/esportes", NULL);
-insert into tl_category values(10, "Beleza e bem estar", "/category/beleza-bem-estar", NULL);
-insert into tl_category values(11, "Negócios", "/category/negocios", NULL);
-insert into tl_category values(12, "Computadores", "/category/computadores", NULL);
-insert into tl_category values(13, "Tecnologia", "/category/tecnologia", NULL);
-insert into tl_category values(14, "Viagem", "/category/viagem", NULL);
-insert into tl_category values(15, "Livros", "/category/livros", NULL);
+insert into tl_category values(1, "Jogos", "/category/show/jogos", NULL);
+insert into tl_category values(2, "Educação", "/category/show/educacao", NULL);
+insert into tl_category values(3, "Política", "/category/show/politica", NULL);
+insert into tl_category values(4, "Ambiente", "/category/show/ambiente", NULL);
+insert into tl_category values(5, "Artes e Entetenimento", "/category/show/artes-e-entretenimento", NULL);
+insert into tl_category values(6, "Animes", "/category/show/animes", NULL);
+insert into tl_category values(7, "Mangás", "/category/show/mangas", NULL);
+insert into tl_category values(8, "Videos", "/category/show/videos", NULL);
+insert into tl_category values(9, "Esportes", "/category/show/esportes", NULL);
+insert into tl_category values(10, "Beleza e bem estar", "/category/show/beleza-bem-estar", NULL);
+insert into tl_category values(11, "Negócios", "/category/show/negocios", NULL);
+insert into tl_category values(12, "Computadores", "/category/show/computadores", NULL);
+insert into tl_category values(13, "Tecnologia", "/category/show/tecnologia", NULL);
+insert into tl_category values(14, "Viagem", "/category/show/viagem", NULL);
+insert into tl_category values(15, "Livros", "/category/show/livros", NULL);
 
 
 
