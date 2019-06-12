@@ -60,7 +60,7 @@
                             </div>          
                         <div class="col-md-12 msgResp">
                              {% if messages['pass']['PresenceOf'] is defined %}
-                              <mark class="erro"> {{ messages['email']['PresenceOf'] }} </mark>
+                              <mark class="erro"> {{ messages['pass']['PresenceOf'] }} </mark>
                           {% else %}
                             {% if messages['pass']['TooShort'] is defined %}
                               <mark class="erro"> {{ messages['pass']['TooShort'] }} </mark>
