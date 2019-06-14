@@ -519,6 +519,9 @@ Cria lista
 			} else {
 					echo 'Deletado com sucesso!';
 			}
+			$listR = Lists::findFirstById($idList);
+			
+			$this->response->redirect($listR->url);
 	}
 }
 
