@@ -48,7 +48,7 @@
 				</div>
 			</div>
 		</fieldset>
-	</form>
+	</form></div>
 
 {% elseif(params === "enviar-imagem") %}
 <div class="row">
